@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #2d7db2, #5238af);
+    margin: 0;
+}
+
+.calculator {
+    background: #ffffff1a;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 320px;
+}
+
+.display {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 2em;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    button {
+        background: rgba(255,255,255,0.15);
+        border: none;
+        border-radius: 10px;
+        font-size: 1.4em;
+        color: #fff;
+        padding: 15px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    button:hover {
+        background: rgba(255,255,255,0.3);
+    }
+
+    .operator {
+        background: linear-gradient(135deg, #fdc166, #af6504);
+        color: white;
+    }
+
+    .operator:hover {
+        background: linear-gradient(135deg, #86632f, #f3900f);
+    }
+
+    .equals {
+        background: linear-gradient(135deg, #66fd6d, #17c907);
+        grid-column: span 2;
+    }
+
+    .equals:hover {
+        background: linear-gradient(135deg, #0ac313, #1df809);
+    }
+
+    .clear {
+        background: linear-gradient(135deg, #fd6666, #ff0000);
+    }
+
+    .clear:hover {
+        background: linear-gradient(135deg, #980d0d, #ff0000);
+    }
+
+    #backspace {
+        background: linear-gradient(135deg, #c25f35, #df5c1a);
+    }
+
+    #backspace:hover {
+        background: linear-gradient(135deg, #bb5100, #ff0000);
+    }
+
+    @media (max-width: 400px) {
+        .calculator {
+            width: 90%;
+        }
+    }
